@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpensiveTime - Your Time Management Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .timezone-card {
+            transition: transform 0.3s ease;
+        }
+        .timezone-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-scroll {
+            height: 400px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-teal-600 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between items-center py-4">
+                <a href="/" class="text-2xl font-bold">ExpensiveTime</a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-teal-200">Home</a>
+                    <a href="#" class="hover:text-teal-200">Time Management</a>
+                    <a href="#" class="hover:text-teal-200">Reminders</a>
+                    <a href="#" class="hover:text-teal-200">Quiz</a>
+                    <a href="#" class="hover:text-teal-200">Calculator</a>
+                    <a href="#" class="hover:text-teal-200">Storage</a>
+                    <a href="#" class="hover:text-teal-200">About</a>
+                    <a href="#" class="hover:text-teal-200">Blog</a>
+                    <a href="#" class="hover:text-teal-200">Contact</a>
+                    <a href="#" class="hover:text-teal-200">Support</a>
+                </div>
+                <button class="md:hidden"><i class="bi bi-list text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Time Zones Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Global Time Zones</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div id="timezone-cards" class="grid grid-cols-1 md:grid-cols-4 gap-4 col-span-full">
+                    <!-- Time zones will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-8 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Our Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-clock text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4">Time Management</h3>
+                    <p class="mt-2 text-gray-600">Efficiently manage your time with our comprehensive tools and tracking system.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-bell text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4">Smart Reminders</h3>
+                    <p class="mt-2 text-gray-600">Never miss important deadlines with our intelligent reminder system.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <i class="bi bi-question-circle text-4xl text-teal-600"></i>
+                    <h3 class="text-xl font-semibold mt-4">Interactive Quizzes</h3>
+                    <p class="mt-2 text-gray-600">Test your knowledge and learn new skills through our interactive quizzes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending News Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Trending News</h2>
+            <div class="news-scroll">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Sample news items -->
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold">New Time Management Techniques Revealed</h3>
+                        <p class="text-gray-600 mt-2">Latest research shows improved productivity with structured time blocks...</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-semibold">Remote Work Time Management Tips</h3>
+                        <p class="text-gray-600 mt-2">Expert advice on managing time effectively while working from home...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-teal-200">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-teal-200">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-teal-200">FAQ</a></li>
+                        <li><a href="#" class="hover:text-teal-200">Support</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-3 text-right">
+                    <p>Contact: support@expensivetime.in</p>
+                    <p class="mt-2">&copy; 2024 ExpensiveTime. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Time zones data and update function
+        const timeZones = [
+            { city: 'New York', zone: 'America/New_York' },
+            { city: 'London', zone: 'Europe/London' },
+            { city: 'Tokyo', zone: 'Asia/Tokyo' },
+            { city: 'Sydney', zone: 'Australia/Sydney' },
+            { city: 'Dubai', zone: 'Asia/Dubai' },
+            { city: 'Paris', zone: 'Europe/Paris' },
+            { city: 'Singapore', zone: 'Asia/Singapore' },
+            { city: 'Mumbai', zone: 'Asia/Kolkata' }
+        ];
+
+        function updateTimeZones() {
+            const container = document.getElementById('timezone-cards');
+            container.innerHTML = '';
+
+            timeZones.forEach(({ city, zone }) => {
+                const time = new Date().toLocaleTimeString('en-US', { timeZone: zone });
+                const card = document.createElement('div');
+                card.className = 'timezone-card bg-white p-4 rounded-lg shadow-md text-center';
+                card.innerHTML = `
+                    <h3 class="font-semibold text-lg">${city}</h3>
+                    <p class="text-2xl mt-2">${time}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Update time zones every second
+        updateTimeZones();
+        setInterval(updateTimeZones, 1000);
+
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('.md\\:flex');
+            nav.classList.toggle('hidden');
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
